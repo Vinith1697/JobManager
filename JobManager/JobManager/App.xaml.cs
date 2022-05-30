@@ -1,4 +1,5 @@
 ﻿
+using JobManager.Services;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,6 +12,8 @@ namespace JobManager
         public App()
         {
             InitializeComponent();
+
+            DependencyService.Register<JobDataStoreLocalJson>();
 
             
             MainPage = new AppShell();
