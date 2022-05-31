@@ -27,7 +27,7 @@
                             <DataTemplate x:Datatype="models:Job">
                                 <ViewCell>
                                     <StackLayout>
-                                        <Label Text="(Binding Name)" TextColor="Black"></Label>
+                                        <Label Text="{Binding Name}" TextColor="Black"></Label>
                                     </StackLayout>
                                 </ViewCell>  
                             </DataTemplate>
