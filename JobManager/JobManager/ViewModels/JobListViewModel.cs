@@ -33,7 +33,7 @@ namespace JobManager.ViewModels
 
         async Task Selected(Job job)
         {
-            string route = $"{nameof(Views.JobDetailPage)}";
+            string route = $"{nameof(Views.JobDetailPage)}?JobId={job.Id}";
             await AppShell.Current.GoToAsync(route);
         }
 
