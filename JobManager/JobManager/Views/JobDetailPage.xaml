@@ -9,12 +9,23 @@
     <ContentPage.BindingContext>
         <viewmodel:JobDetailViewModel />
     </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior
+            EventName="Appearing"
+            Command="{Binding PageAppearingCommand}"></xct:EventToCommandBehavior>
+    </ContentPage.Behaviors>
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="JobDetailPage goes here"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Job Id:" FontSize="Medium"/>
+            <Label Text="{Binding JobId}" FontSize="Small"/>
+
+            <Label Text="Job Name:" FontSize="Medium"/>
+            <Label Text="{Binding Name}" FontSize="Small"/>
+
+            <Label Text="Job Description:" FontSize="Medium"/>
+            <Label Text="{Binding Description}" FontSize="Small"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

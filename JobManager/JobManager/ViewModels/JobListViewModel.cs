@@ -12,7 +12,7 @@ namespace JobManager.ViewModels
     {
         public ObservableRangeCollection<Job> Jobs { get; set; }
         public AsyncCommand RefreshCommand { get; }
-        public AsyncCommand<Job> SelectCommand { get; }
+        public AsyncCommand<Job> SelectedCommand { get; }
         private Job selectedJob;
         public Job SelectedJob
         {
@@ -28,7 +28,7 @@ namespace JobManager.ViewModels
             LoadJobs();
 
             RefreshCommand = new AsyncCommand(Refresh);
-            SelectCommand = new AsyncCommand<Job>(Selected);
+            SelectedCommand = new AsyncCommand<Job>(Selected);
         }
 
         async Task Selected(Job job)
